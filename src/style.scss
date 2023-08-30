@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Cutive+Mono&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+// @import 'lib/swiper-bundle.min.css';
+
+* {
+  font-family: 'Courier Prime', monospace;
+  // font-family: 'IBM Plex Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+img {
+}
+
+.container{
+  margin: auto;
+  padding: 30px;
+  max-width: 90%;
+  max-width: 1200px;
+}
+
+.header{
+  background-color: #0b5f46;
+
+  &__box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu-list{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    color: #fff4de;
+    font-size: 18px;
+
+    li{
+
+      &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.main{
+  background-color: #0b5f46;
+  &__box{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &__spiner{
+    display: flex;
+    flex-direction: column;
+    margin: 200px;
+  }
+
+  &__spiner-logo{
+    position: absolute;
+    top: 218px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 256px;
+    height: 256px;
+  }
+
+  &__spiner-text{
+    top: 142px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 416px;
+    height: 416px;
+    animation: rotation 10s infinite linear;
+
+    @keyframes rotation {
+      from {
+        transform: rotate(360deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__text{
+    max-width: 1200px;
+  }
+}
