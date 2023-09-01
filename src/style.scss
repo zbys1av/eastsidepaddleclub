@@ -14,6 +14,7 @@ html {
 body {
   margin: 0;
   scroll-behavior: smooth;
+  background-color: #fff4de;
 }
 
 img {
@@ -207,5 +208,61 @@ img {
   &__text{
     color: #fff4de;
     font-size: 19px;
+  }
+}
+
+.tuned{
+  &__scrolling-text{
+    overflow: visible;
+  }
+
+  &__line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+
+    span{
+      font-size: 65px;
+      text-transform: uppercase;
+    }
+
+    img{
+      width: 40px;
+    }
+    
+    &--left{
+      color: #0b5f46;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #0b5f46;
+      width: 6455px;
+      animation: scroll-left 60s infinite linear;
+      
+      @keyframes scroll-left {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-80%);
+        }
+      }
+    }
+
+    &--right{
+      color: #fff4de;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #0b5f46;
+      width: 6455px;
+      animation: scroll-right 60s infinite linear;
+      
+      @keyframes scroll-right {
+        from {
+          transform: translateX(-80%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+    }
   }
 }
