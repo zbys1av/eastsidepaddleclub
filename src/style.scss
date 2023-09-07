@@ -212,6 +212,8 @@ img {
 }
 
 .tuned{
+  overflow: hidden;
+
   &__scrolling-text{
     overflow: visible;
   }
@@ -264,5 +266,71 @@ img {
         }
       }
     }
+
+  }
+
+  &__form-box{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+    background: #0b5f46;
+    height: 580px;
+  }
+
+  &__info{
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__info-title{
+    color: #fff4de;
+    font-size: 36px;
+  }
+
+  &__info-txt{
+    color: #fff4de;
+    font-size: 18px;
+  }
+
+  &__info-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input{
+      background: #fff4de;
+      border: 2px solid transparent;
+      padding: 15px;
+      color: #0b5f46;
+      outline: none;
+    }
+
+    a{
+      text-decoration: none;
+      border: 2px solid #fff4de;
+      padding: 15px;
+      background: #fff4de;
+      color: #0b5f46;
+      transition: 0.3s;
+
+      &:hover{
+        cursor: pointer;
+        background: #0b5f46;
+        color: #fff4de;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &__pic{
+    width: 130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
 }
