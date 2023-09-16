@@ -8,16 +8,43 @@
 }
 
 html {
-
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  scroll-behavior: smooth;
   background-color: #fff4de;
 }
 
 img {
+}
+
+h3,h4,p,span{
+  display: block;
+  // opacity: 0%;
+}
+
+.visible{
+  opacity: 100%;
+}
+
+.hidden{
+  opacity: 0%;
+}
+
+.text-animation{
+  animation: reveal 1.9s;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0,60%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translate(0,0);
+    opacity: 100%;
+  }
 }
 
 .container{
@@ -47,6 +74,11 @@ img {
     font-size: 18px;
 
     li{
+      
+      a{
+        color: #fff4de;
+        text-decoration: none;
+      }
 
       &:hover{
         cursor: pointer;
@@ -68,12 +100,13 @@ img {
   &__spiner{
     display: flex;
     flex-direction: column;
-    margin: 200px;
+    // margin: 300px;
+    height: 70vh;
   }
 
   &__spiner-logo{
     position: absolute;
-    top: 218px;
+    top: 98px;
     left: 0;
     right: 0;
     margin: auto;
@@ -82,7 +115,7 @@ img {
   }
 
   &__spiner-text{
-    top: 142px;
+    top: 22px;
     left: 0;
     right: 0;
     margin: auto;
@@ -623,6 +656,17 @@ img {
     flex-direction: row;
     gap: 30px;
     list-style: none;
+  }
+
+  li{
+    a{
+      color: #fff4de;
+      text-decoration: none;
+    }
+
+    &:hover{
+      text-decoration: underline;
+    }
   }
 
   &__section:nth-child(2){
